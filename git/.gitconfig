@@ -28,3 +28,6 @@
 
 [mergetool "vscode"]
 	cmd = code --wait $MERGED
+[user]
+	name = Riad-Attou
+	email = attou.rd@gmail.com
