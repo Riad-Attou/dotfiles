@@ -45,22 +45,6 @@ dotfiles/
 
 ---
 
-## How symlinks work
-
-Instead of copying config files to the locations that tools expect, `install.ps1` creates **symbolic links** — filesystem pointers that make a file appear in multiple places at once.
-
-For example, after running `install.ps1`, `%APPDATA%\Code\User\settings.json` is not a real file: it's a symlink that points to `vscode/settings.json` in this repo. VSCode reads it transparently, and any edit you make (whether through VSCode's UI or directly in the repo) is the same edit to the same file.
-
-This means:
-
-- You edit configs in one place (the repo), not scattered across the system
-- `git diff` shows all your config changes
-- Pulling updates on a new machine is a single `git pull` + `.\install.ps1`
-
-> **Windows requirement**: creating symlinks requires either **administrator rights** or **Developer Mode** enabled in Windows Settings → For Developers.
-
----
-
 ## Requirements
 
 - Windows 10/11
@@ -130,7 +114,7 @@ Edit `vscode/settings.json` or `vscode/keybindings.json` directly — they are s
 ### Update VSCode extensions
 
 ```powershell
-code --list-extensions > vscode/extensions.txt
+code.cmd --list-extensions > vscode/extensions.txt
 ```
 
 Then commit and push.
@@ -153,6 +137,21 @@ Edit `git/.gitconfig` directly. The symlink means changes apply immediately syst
 git pull
 .\install.ps1   # re-links in case new files were added
 ```
+
+---
+
+## Templates
+
+Le dossier `templates/` contient des fichiers de configuration à copier dans chaque nouveau projet.
+
+### pre-commit
+
+```powershell
+Copy-Item C:\Users\attou\dev\dotfiles\templates\.pre-commit-config.yaml .
+pre-commit install
+```
+
+---
 
 # License
 

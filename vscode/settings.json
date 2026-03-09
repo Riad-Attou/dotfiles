@@ -14,20 +14,20 @@
      ========================= */
 
   "[python]": {
-    "editor.defaultFormatter": "ms-python.black-formatter",
+    "editor.defaultFormatter": "charliermarsh.ruff",
     "editor.formatOnSave": true,
     "editor.codeActionsOnSave": {
       "source.organizeImports": "explicit",
       "source.fixAll.ruff": "explicit"
     }
   },
-  "ruff.organizeImports": true,
 
   "[notebook]": {
-    "editor.defaultFormatter": "ms-python.black-formatter",
+    "editor.defaultFormatter": "charliermarsh.ruff",
     "editor.formatOnSave": true,
     "editor.codeActionsOnSave": {
-      "source.organizeImports": "explicit"
+      "notebook.source.organizeImports": "explicit",
+      "notebook.source.fixAll": "explicit"
     }
   },
 

@@ -53,4 +53,9 @@ New-RepoLink "$repo\git\.gitconfig" "$HOME\.gitconfig"
 # Latexindent config
 New-RepoLink "$repo\latex\latexindent.yaml" "$HOME\.latexindent.yaml"
 
+# VSCode snippets
+Get-ChildItem "$repo\vscode\snippets" -File -ErrorAction SilentlyContinue | ForEach-Object {
+    New-RepoLink $_.FullName "$vscode\snippets\$($_.Name)"
+}
+
 Write-Host "Configuration linked."
