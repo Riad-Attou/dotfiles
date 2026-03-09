@@ -1,0 +1,226 @@
+{
+  /* =========================
+     EDITOR
+     ========================= */
+
+  "editor.fontFamily": "Fira Code",
+  "editor.fontLigatures": true,
+  "editor.formatOnSave": true,
+  "editor.largeFileOptimizations": false,
+  "editor.unicodeHighlight.ambiguousCharacters": false,
+
+  /* =========================
+     LANGUAGE SPECIFIC
+     ========================= */
+
+  "[python]": {
+    "editor.defaultFormatter": "ms-python.black-formatter",
+    "editor.formatOnSave": true,
+    "editor.codeActionsOnSave": {
+      "source.organizeImports": "explicit",
+      "source.fixAll.ruff": "explicit"
+    }
+  },
+  "ruff.organizeImports": true,
+
+  "[notebook]": {
+    "editor.defaultFormatter": "ms-python.black-formatter",
+    "editor.formatOnSave": true,
+    "editor.codeActionsOnSave": {
+      "source.organizeImports": "explicit"
+    }
+  },
+
+  "[latex]": {
+    "editor.formatOnPaste": false,
+    "editor.suggestSelection": "recentlyUsedByPrefix"
+  },
+
+  "[json]": {
+    "editor.defaultFormatter": "vscode.json-language-features",
+    "editor.formatOnSave": true
+  },
+
+  /* =========================
+     LATEX WORKSHOP
+     ========================= */
+
+  "latex-workshop.view.pdf.viewer": "tab",
+  "latex-workshop.latex.autoBuild.run": "onSave",
+
+  "latex-workshop.latex.outDir": "build",
+
+  "latex-workshop.intellisense.label.enabled": true,
+  "latex-workshop.intellisense.citation.enabled": true,
+  "latex-workshop.intellisense.package.enabled": true,
+  "latex-workshop.intellisense.command.enabled": true,
+
+  "latex-workshop.synctex.afterBuild.enabled": true,
+  "latex-workshop.view.pdf.internal.synctex.keybinding": "double-click",
+
+  "latex-workshop.latex.recipes": [
+    {
+      "name": "latexmk",
+      "tools": ["latexmk"]
+    }
+  ],
+
+  "latex-workshop.latex.tools": [
+    {
+      "name": "latexmk",
+      "command": "latexmk",
+      "args": [
+        "-pdf",
+        "-shell-escape",
+        "-synctex=1",
+        "-interaction=nonstopmode",
+        "-file-line-error",
+        "-outdir=build",
+        "%DOC%"
+      ]
+    }
+  ],
+
+  "latex-workshop.latex.clean.fileTypes": [
+    "*.aux",
+    "*.bbl",
+    "*.bcf",
+    "*.blg",
+    "*.fdb_latexmk",
+    "*.fls",
+    "*.log",
+    "*.out",
+    "*.run.xml",
+    "*.synctex.gz"
+  ],
+
+  "latex-workshop.formatting.latex": "latexindent",
+  "latex-workshop.formatting.latexindent.args": [
+    "-l",
+    "%TMPFILE%"
+  ],
+
+  /* =========================
+     MARKDOWN
+     ========================= */
+
+  "[markdown]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.formatOnSave": true
+  },
+
+  /* =========================
+     NOTEBOOK / JUPYTER
+     ========================= */
+
+  "notebook.formatOnSave.enabled": true,
+  "notebook.lineNumbers": "on",
+  "notebook.output.textLineLimit": 100,
+
+  "notebook.cellToolbarLocation": {
+    "default": "right",
+    "jupyter-notebook": "right"
+  },
+
+  "jupyter.askForKernelRestart": false,
+  "jupyter.jupyterCommandLineArguments": [],
+
+  /* =========================
+     TERMINAL
+     ========================= */
+
+  "terminal.integrated.fontSize": 15,
+
+  /* =========================
+     EXPLORER
+     ========================= */
+
+  "explorer.confirmDragAndDrop": false,
+  "explorer.confirmDelete": false,
+  "explorer.confirmPasteNative": false,
+
+  "explorer.fileNesting.patterns": {
+    "*.ts": "${capture}.js",
+    "*.js": "${capture}.js.map, ${capture}.min.js, ${capture}.d.ts",
+    "*.jsx": "${capture}.js",
+    "*.tsx": "${capture}.ts",
+    "tsconfig.json": "tsconfig.*.json",
+    "package.json": "package-lock.json, yarn.lock, pnpm-lock.yaml, bun.lockb",
+    "Cargo.toml": "Cargo.lock",
+    "*.sqlite": "${capture}.${extname}-*",
+    "*.db": "${capture}.${extname}-*",
+    "*.sqlite3": "${capture}.${extname}-*",
+    "*.db3": "${capture}.${extname}-*",
+    "*.sdb": "${capture}.${extname}-*",
+    "*.s3db": "${capture}.${extname}-*"
+  },
+
+  /* =========================
+     GIT
+     ========================= */
+
+  "git.confirmSync": false,
+  "git.enableSmartCommit": true,
+  "git.autofetch": true,
+  "git.openRepositoryInParentFolders": "never",
+
+  /* =========================
+     WORKBENCH
+     ========================= */
+
+  "workbench.startupEditor": "none",
+  "workbench.editor.empty.hint": "hidden",
+
+  "workbench.editorAssociations": {
+    "*.pdf": "latex-workshop-pdf-hook"
+  },
+
+  /* =========================
+     EXTENSIONS
+     ========================= */
+
+  "extensions.ignoreRecommendations": true,
+  "react-native-tools.showUserTips": false,
+
+  /* =========================
+     COPILOT
+     ========================= */
+
+  "github.copilot.nextEditSuggestions.enabled": true,
+
+  "github.copilot.enable": {
+    "*": true,
+    "plaintext": false,
+    "markdown": false,
+    "scminput": false,
+    "latex": true,
+    "python": false
+  },
+
+  /* =========================
+     CHAT
+     ========================= */
+
+  "chat.commandCenter.enabled": false,
+  "chat.viewSessions.orientation": "stacked",
+  "chat.agent.maxRequests": 50,
+
+  "chat.tools.terminal.autoApprove": {
+    ".\\migrate-theme.ps1": true
+  },
+
+  /* =========================
+     SECURITY
+     ========================= */
+
+  "security.workspace.trust.untrustedFiles": "open",
+
+  /* =========================
+     HASKELL
+     ========================= */
+
+  "haskell.manageHLS": "GHCup"
+}
+
+
+
