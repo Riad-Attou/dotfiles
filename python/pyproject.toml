@@ -3,5 +3,7 @@ line-length = 88
 
 [tool.ruff]
 line-length = 88
-select = ["E", "F", "I", "B"]
 fix = true
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "B"]

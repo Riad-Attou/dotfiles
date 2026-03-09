@@ -1,0 +1,13 @@
+defaultIndent: "    "
+
+modifyLineBreaks:
+  preserveBlankLines: 1
+
+verbatimEnvironments:
+  codebox: 1
+  minted: 1
+  lstlisting: 1
+
+indentAfterItems:
+  itemize: 1
+  enumerate: 1
