@@ -142,7 +142,7 @@ git pull
 
 ## Templates
 
-Le dossier `templates/` contient des fichiers de configuration à copier dans chaque nouveau projet.
+The `templates/` folder contains configuration files to be copied into each new project.
 
 ### pre-commit
 
@@ -150,8 +150,6 @@ Le dossier `templates/` contient des fichiers de configuration à copier dans ch
 Copy-Item C:\Users\attou\dev\dotfiles\templates\.pre-commit-config.yaml .
 pre-commit install
 ```
-
----
 
 # License
 
