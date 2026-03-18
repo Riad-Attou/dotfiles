@@ -234,5 +234,6 @@
      HASKELL
      ========================= */
 
-  "haskell.manageHLS": "GHCup"
+  "haskell.manageHLS": "GHCup",
+  "claudeCode.preferredLocation": "panel"
 }
