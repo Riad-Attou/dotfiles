@@ -1,0 +1,80 @@
+format = """
+[╭─](fg:#2a2b3d)\
+$os\
+$directory\
+$git_branch\
+$git_status\
+$python\
+$nodejs\
+$rust\
+$java\
+$cmd_duration\
+$line_break\
+[╰─](fg:#2a2b3d)\
+$character"""
+
+[os]
+disabled = false
+style = "bg:#1a1b26 fg:#7aa2f7"
+format = '[$symbol ]($style)'
+
+[os.symbols]
+Arch = ""
+
+[directory]
+style = "bg:#1a1b26 fg:#c0caf5"
+format = "[ $path ]($style)"
+truncation_length = 4
+truncation_symbol = "…/"
+
+[directory.substitutions]
+"~" = " ~"
+
+[git_branch]
+symbol = ""
+style = "bg:#1a1b26 fg:#9ece6a"
+format = '[ $symbol $branch ]($style)'
+
+[git_status]
+style = "bg:#1a1b26 fg:#f7768e"
+format = '[$all_status$ahead_behind ]($style)'
+conflicted = "󰞇 "
+ahead = "⇡${count} "
+behind = "⇣${count} "
+diverged = "⇕ "
+untracked = "? "
+stashed = " "
+modified = "! "
+staged = "+ "
+renamed = "» "
+deleted = "✘ "
+
+[python]
+symbol = ""
+style = "bg:#1a1b26 fg:#e0af68"
+format = '[ $symbol $version ]($style)'
+
+[nodejs]
+symbol = ""
+style = "bg:#1a1b26 fg:#9ece6a"
+format = '[ $symbol $version ]($style)'
+
+[rust]
+symbol = ""
+style = "bg:#1a1b26 fg:#f7768e"
+format = '[ $symbol $version ]($style)'
+
+[java]
+symbol = ""
+style = "bg:#1a1b26 fg:#e0af68"
+format = '[ $symbol $version ]($style)'
+
+[cmd_duration]
+min_time = 2000
+style = "bg:#1a1b26 fg:#545c7e"
+format = '[ 󱎫 $duration ]($style)'
+
+[character]
+success_symbol = "[❯](fg:#7aa2f7)"
+error_symbol = "[❯](fg:#f7768e)"
+vimcmd_symbol = "[❮](fg:#9ece6a)"

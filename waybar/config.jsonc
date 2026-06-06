@@ -1,0 +1,280 @@
+{
+  "layer": "top",
+  "position": "top",
+  "height": 30,
+  "spacing": 4,
+  "margin-top": 5,
+  "margin-left": 10,
+  "margin-right": 10,
+
+  "modules-left": ["hyprland/workspaces", "hyprland/window"],
+  "modules-center": ["clock"],
+  "modules-right": ["tray", "custom/updates", "custom/media", "custom/weather", "bluetooth", "pulseaudio", "backlight", "battery", "custom/profile-dot", "custom/mullvad", "network", "custom/power"],
+
+  "hyprland/workspaces": {
+    "format": "{name} {windows}",
+    "format-window-separator": " ",
+    "window-rewrite-default": "",
+    "window-rewrite": {
+      "class<kitty>": "",
+      "class<code>": "",
+      "class<google-chrome>": "",
+      "class<Emulator>": "",
+      "class<spotify>": "",
+      "class<discord>": "",
+      "class<firefox>": "",
+      "class<pavucontrol>": "",
+      "class<blueman-manager>": "",
+
+      "class<[Tt]hunar>": "󰉉",
+      "class<nautilus>": "󰉉",
+      "class<org.gnome.Nautilus>": "󰉉",
+      "class<dolphin>": "󰉉",
+      "class<nemo>": "󰉉",
+      "class<pcmanfm>": "󰉉",
+
+      "class<[Aa]lacritty>": "",
+      "class<foot(client)?>": "",
+      "class<org.wezfurlong.wezterm>": "",
+      "class<com.mitchellh.ghostty>": "",
+
+      "class<telegram-desktop>": "",
+      "class<org.telegram.desktop>": "",
+      "class<[Ss]ignal>": "󰥧",
+      "class<obsidian>": "󰦆",
+      "class<slack>": "󰓶",
+      "class<zoom>": "󰐻",
+      "class<thunderbird>": "󰇰",
+      "class<org.mozilla.Thunderbird>": "󰇰",
+
+      "class<vlc>": "󰕼",
+      "class<mpv>": "",
+
+      "class<gimp.*>": "",
+      "class<org.gimp.Gimp>": "",
+      "class<inkscape>": "",
+      "class<org.inkscape.Inkscape>": "",
+      "class<krita>": "",
+      "class<org.kde.krita>": "",
+      "class<blender>": "󰀫",
+
+      "class<evince>": "",
+      "class<org.gnome.Evince>": "",
+      "class<okular>": "",
+      "class<org.kde.okular>": "",
+      "class<zathura>": "",
+      "class<org.pwmt.zathura>": "",
+
+      "class<[Ss]team>": "",
+      "class<neovide>": "",
+      "class<[Cc]ursor>": "",
+
+      "class<libreoffice-writer>": "󰈙",
+      "class<libreoffice-calc>": "󰉧",
+      "class<libreoffice-impress>": "󰐑",
+      "class<libreoffice-draw>": "",
+      "class<soffice>": "",
+
+      "class<[Pp]ostman>": "",
+      "class<dbeaver>": "",
+      "class<[Ff]ile[Zz]illa>": "󰁯",
+      "class<org.remmina.Remmina>": "",
+      "class<virt-manager>": "",
+      "class<calibre>": "",
+      "class<org.gnome.FileRoller>": "",
+      "class<file-roller>": "",
+      "class<org.kde.ark>": "",
+      "class<ark>": "",
+      "class<engrampa>": "",
+      "class<xarchiver>": "",
+      "class<peazip>": "",
+
+      "class<org.gnome.eog>": "",
+      "class<eog>": "",
+      "class<feh>": "",
+      "class<imv>": "",
+      "class<geeqie>": "",
+      "class<org.kde.gwenview>": "",
+      "class<gwenview>": "",
+      "class<org.gnome.Loupe>": "",
+      "class<nomacs>": "",
+
+      "class<org.gnome.gedit>": "",
+      "class<gedit>": "",
+      "class<org.kde.kate>": "",
+      "class<kate>": "",
+      "class<mousepad>": "",
+      "class<org.gnome.TextEditor>": "",
+      "class<xed>": "",
+
+      "class<[Bb]rave-browser>": "",
+      "class<chromium>": "",
+      "class<opera>": "",
+      "class<vivaldi.*>": "",
+      "class<org.gnome.Epiphany>": "",
+
+      "class<org.qbittorrent.qBittorrent>": "",
+      "class<qbittorrent>": "",
+      "class<com.transmissionbt.Transmission>": "",
+      "class<transmission-gtk>": "",
+      "class<deluge>": "",
+
+      "class<flameshot>": "",
+      "class<org.gnome.Screenshot>": "",
+
+      "class<org.keepassxc.KeePassXC>": "",
+      "class<keepassxc>": "",
+      "class<[Bb]itwarden>": "",
+
+      "class<org.gnome.SystemMonitor>": "",
+      "class<io.missioncenter.MissionCenter>": "",
+      "class<org.gnome.DiskUtility>": "󰋊",
+      "class<gparted>": "󰋊",
+
+      "class<io.github.celluloid_player.Celluloid>": "",
+      "class<org.gnome.Totem>": "",
+
+      "class<org.gnome.Rhythmbox3>": "",
+      "class<net.strawberrymusicplayer.strawberry>": "",
+      "class<audacious>": "",
+      "class<org.kde.elisa>": "",
+      "class<org.gnome.Lollypop>": "",
+
+      "class<jetbrains-idea>": "",
+      "class<jetbrains-pycharm.*>": "",
+      "class<jetbrains-webstorm>": "",
+      "class<jetbrains-goland>": "",
+      "class<jetbrains-clion>": "",
+      "class<jetbrains-rider>": "",
+      "class<jetbrains-datagrip>": "",
+      "class<jetbrains-phpstorm>": "",
+      "class<jetbrains-rustrover>": "",
+      "class<android-studio>": ""
+    },
+    "persistent-workspaces": { "*": 5 },
+    "on-click": "activate",
+    "sort-by-number": true,
+    "on-scroll-up": "hyprctl dispatch workspace e+1",
+    "on-scroll-down": "hyprctl dispatch workspace e-1"
+  },
+
+  "hyprland/window": {
+    "format": "{}",
+    "max-length": 50,
+    "separate-outputs": true
+  },
+
+  "clock": {
+    "format": "  {:%H:%M}",
+    "on-click": "python3 ~/.config/waybar/scripts/calendar-popup.py",
+    "tooltip": false
+  },
+
+  "battery": {
+    "states": {
+      "warning": 30,
+      "critical": 15
+    },
+    "format": "{icon} {capacity}%",
+    "format-charging": "󰂄 {capacity}%",
+    "format-plugged": "󰚥 {capacity}%",
+    "format-icons": ["󰂎", "󰁺", "󰁻", "󰁼", "󰁽", "󰁾", "󰁿", "󰂀", "󰂁", "󰂂", "󰁹"],
+    "on-click": "~/.config/waybar/scripts/battery-popup.py"
+  },
+
+  "network": {
+    "format-wifi": "󰤨 {signalStrength}%",
+    "format-ethernet": "󰈀 {ipaddr}",
+    "format-disconnected": "󰤭 Disconnected",
+    "tooltip-format": "{essid} ({signalStrength}%) — {ipaddr}",
+    "on-click": "python3 ~/.config/waybar/scripts/wifi-popup.py"
+  },
+
+  "pulseaudio": {
+    "format": "{icon} {volume}%",
+    "format-muted": "󰝟 Muted",
+    "format-icons": {
+      "default": ["󰕿", "󰖀", "󰕾"]
+    },
+    "signal": 1,
+    "on-click": "~/.config/waybar/scripts/volume-popup.py",
+    "on-scroll-up": "wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%+",
+    "on-scroll-down": "wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%-"
+  },
+
+  "backlight": {
+    "format": "{icon} {percent}%",
+    "format-icons": ["󰃞", "󰃟", "󰃠"],
+    "on-click": "python3 ~/.config/waybar/scripts/brightness-popup.py",
+    "on-scroll-up": "brightnessctl set 5%+",
+    "on-scroll-down": "brightnessctl set 5%-"
+  },
+
+  "tray": {
+    "spacing": 8
+  },
+
+  "bluetooth": {
+    "format": "󰂯",
+    "format-disabled": "󰂲",
+    "format-connected": "󰂱 {device_alias}",
+    "format-connected-battery": "󰂱 {device_alias} {device_battery_percentage}%",
+    "tooltip-format": "{controller_alias} ({controller_address})",
+    "tooltip-format-connected": "{controller_alias}\n{device_enumerate}",
+    "tooltip-format-enumerate-connected": "  {device_alias}",
+    "on-click": "python3 ~/.config/waybar/scripts/bluetooth-popup.py"
+  },
+
+  "custom/weather": {
+    "exec": "~/.config/waybar/scripts/weather.sh",
+    "return-type": "json",
+    "interval": 1800,
+    "signal": 8,
+    "on-click": "~/.config/waybar/scripts/weather-config.sh",
+    "format": "{}",
+    "tooltip": true
+  },
+
+  "custom/media": {
+    "exec": "~/.config/waybar/scripts/media.sh",
+    "return-type": "json",
+    "interval": 5,
+    "on-click": "python3 ~/.config/waybar/scripts/media-popup.py",
+    "on-scroll-up": "playerctl next",
+    "on-scroll-down": "playerctl previous",
+    "format": "{}",
+    "escape": true
+  },
+
+  "custom/profile-dot": {
+    "exec": "~/.config/waybar/scripts/profile-dot.sh",
+    "return-type": "json",
+    "interval": 60,
+    "signal": 2,
+    "format": "{}",
+    "tooltip": true
+  },
+
+  "custom/power": {
+    "format": "⏻",
+    "on-click": "~/.config/waybar/scripts/power-menu.sh",
+    "tooltip": false
+  },
+
+  "custom/updates": {
+    "exec": "~/.config/waybar/scripts/updates.sh",
+    "return-type": "json",
+    "interval": 1800,
+    "signal": 7,
+    "tooltip": true,
+    "on-click": "hyprctl dispatch focusworkspaceoncurrentmonitor 1 && kitty --title UpdateTerminal -e bash -c 'yay -Syu; echo; echo Done — press any key to close; read -rsn1'"
+  },
+
+  "custom/mullvad": {
+    "exec": "~/.config/waybar/scripts/mullvad.sh",
+    "return-type": "json",
+    "interval": 10,
+    "tooltip": true,
+    "on-click": "python3 ~/.config/waybar/scripts/mullvad-popup.py"
+  }
+}

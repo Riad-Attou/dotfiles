@@ -1,156 +1,43 @@
 # Dotfiles
 
-Personal development environment configuration for Windows + VSCode.
+Arch Linux + Hyprland setup. Public, shareable configs — no personal data.
 
-Configurations managed:
+| Tool | Location |
+|------|----------|
+| Hyprland | `hypr/hyprland.conf` + `hypr/scripts/` |
+| Waybar | `waybar/config.jsonc`, `waybar/style.css`, `waybar/scripts/` |
+| Kitty | `kitty/kitty.conf` |
+| Rofi | `rofi/launcher.rasi`, `rofi/tokyo-night.rasi` |
+| Mako | `mako/config` |
+| Fastfetch | `fastfetch/config.jsonc` |
+| Zathura | `zathura/zathurarc` |
+| Starship | `starship/starship.toml` |
+| Zsh | `zsh/zshrc` |
+| VSCode | `vscode/settings.json`, `vscode/keybindings.json`, `vscode/extensions.txt` |
+| Git | `git/.gitconfig` |
+| EditorConfig | `editor/.editorconfig` |
 
-| Tool              | File                                                   |
-| ----------------- | ------------------------------------------------------ |
-| VSCode            | `vscode/settings.json`, `vscode/keybindings.json`      |
-| VSCode extensions | `vscode/extensions.txt`                                |
-| Python tooling    | `python/requirements-dev.txt`, `python/pyproject.toml` |
-| Git               | `git/.gitconfig`                                       |
-| LaTeX formatting  | `latex/latexindent.yaml`                               |
-| EditorConfig      | `editor/.editorconfig`                                 |
+## Stack
 
----
+- **WM:** Hyprland
+- **Bar:** Waybar with custom Python popup system (volume, brightness, battery, bluetooth, wifi, media, calendar, Mullvad)
+- **Terminal:** Kitty + Yazi
+- **Launcher:** Rofi
+- **Notifications:** Mako
+- **Theme:** Tokyo Night GTK, Catppuccin cursors
+- **Shell:** Zsh + Starship
 
-## Structure
+## Install
 
-```
-dotfiles/
-│
-├── vscode/
-│   ├── settings.json        # VSCode user settings
-│   ├── keybindings.json     # VSCode keybindings
-│   └── extensions.txt       # VSCode extension list
-│
-├── python/
-│   ├── requirements-dev.txt # Python dev tools (black, ruff, ...)
-│   └── pyproject.toml       # black + ruff config
-│
-├── latex/
-│   └── latexindent.yaml     # latexindent formatter config
-│
-├── git/
-│   └── .gitconfig           # Git aliases, editor, pull/push defaults
-│
-├── editor/
-│   └── .editorconfig        # Universal editor config (indent, charset, ...)
-│
-├── bootstrap.ps1            # Full machine setup (install + link everything)
-├── install.ps1              # Create symlinks only
-└── install-vscode-extensions.ps1  # Install VSCode extensions only
+```bash
+git clone https://github.com/Riad-Attou/dotfiles ~/dotfiles
+cd ~/dotfiles
+chmod +x install.sh
+./install.sh
 ```
 
----
+> **Note:** Edit `hypr/hyprland.conf` and uncomment/fill the bluetooth autoconnect line with your device MAC.
 
-## Requirements
-
-- Windows 10/11
-- PowerShell 5.1+
-- [winget](https://learn.microsoft.com/en-us/windows/package-manager/winget/) (App Installer from Microsoft Store)
-- **Administrator rights** or [Developer Mode](https://learn.microsoft.com/en-us/windows/apps/get-started/enable-your-device-for-development) enabled (required for symbolic links)
-
----
-
-## Bootstrap a new machine
-
-> Run PowerShell as Administrator.
-
-Clone the repository:
-
-```powershell
-git clone https://github.com/<your-username>/dotfiles.git
-cd dotfiles
-```
-
-Run the bootstrap script:
-
-```powershell
-.\bootstrap.ps1
-```
-
-This will automatically:
-
-1. Install **Git**, **Python 3.12**, **VSCode**, **TeXLive** via winget
-2. Install Python dev tools: `black`, `ruff`, `pre-commit`, `pytest`, `mypy`
-3. Install all VSCode extensions from `vscode/extensions.txt`
-4. Symlink all config files to their expected locations
-
-After bootstrap, set your Git identity (not stored in the repo):
-
-```powershell
-git config --global user.name "Your Name"
-git config --global user.email "you@example.com"
-```
-
----
-
-## Symlink config files only
-
-To re-link configs without re-installing tools (e.g. after pulling updates):
-
-```powershell
-.\install.ps1
-```
-
----
-
-## Install VSCode extensions only
-
-```powershell
-.\install-vscode-extensions.ps1
-```
-
----
-
-## How to update
-
-### Update VSCode settings or keybindings
-
-Edit `vscode/settings.json` or `vscode/keybindings.json` directly — they are symlinked, so VSCode picks up changes immediately. Commit and push.
-
-### Update VSCode extensions
-
-```powershell
-code.cmd --list-extensions > vscode/extensions.txt
-```
-
-Then commit and push.
-
-### Update Python tools
-
-Edit `python/requirements-dev.txt`, then re-run:
-
-```powershell
-pip install -r python/requirements-dev.txt
-```
-
-### Update Git config
-
-Edit `git/.gitconfig` directly. The symlink means changes apply immediately system-wide.
-
-### Pull updates on another machine
-
-```powershell
-git pull
-.\install.ps1   # re-links in case new files were added
-```
-
----
-
-## Templates
-
-The `templates/` folder contains configuration files to be copied into each new project.
-
-### pre-commit
-
-```powershell
-Copy-Item C:\Users\attou\dev\dotfiles\templates\.pre-commit-config.yaml .
-pre-commit install
-```
-
-# License
+## License
 
 MIT

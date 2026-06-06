@@ -1,0 +1,44 @@
+# ── PATH ──────────────────────────────────────────────────────
+export PATH="$HOME/.local/bin:$PATH"
+export ANDROID_HOME=$HOME/Android/Sdk
+export PATH="$ANDROID_HOME/emulator:$ANDROID_HOME/platform-tools:$PATH"
+
+# ── Plugins ───────────────────────────────────────────────────
+source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
+source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+
+# ── History ───────────────────────────────────────────────────
+HISTFILE=~/.zsh_history
+HISTSIZE=10000
+SAVEHIST=10000
+setopt HIST_IGNORE_DUPS
+setopt HIST_IGNORE_SPACE
+setopt SHARE_HISTORY
+
+# ── Completion ────────────────────────────────────────────────
+autoload -Uz compinit && compinit
+zstyle ':completion:*' menu select
+zstyle ':completion:*' matcher-list 'm:{a-z}={A-Z}'
+
+# ── Options ───────────────────────────────────────────────────
+setopt AUTO_CD
+setopt CORRECT
+
+# ── Keybindings ───────────────────────────────────────────────
+bindkey '^[[A' history-search-backward
+bindkey '^[[B' history-search-forward
+bindkey '^[[1;5C' forward-word
+bindkey '^[[1;5D' backward-word
+
+# ── Aliases ───────────────────────────────────────────────────
+alias ls='ls --color=auto'
+alias ll='ls -lah --color=auto'
+alias grep='grep --color=auto'
+alias cls='clear'
+
+# ── Starship prompt ───────────────────────────────────────────
+eval "$(starship init zsh)"
+
+[ -f "/home/riad/.ghcup/env" ] && . "/home/riad/.ghcup/env" # ghcup-envexport PATH="$HOME/x10/bin:$PATH"
+export PATH="$HOME/x10/bin:$PATH"
+export JAVA_HOME=/usr/lib/jvm/java-17-openjdk

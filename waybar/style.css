@@ -1,0 +1,157 @@
+* {
+  font-family: "JetBrainsMono Nerd Font";
+  font-size: 11px;
+  min-height: 0;
+}
+
+window#waybar {
+  background: rgba(26, 27, 38, 0.85);
+  border: 1px solid rgba(122, 162, 247, 0.2);
+  border-radius: 12px;
+  color: #c0caf5;
+}
+
+.modules-left,
+.modules-center,
+.modules-right {
+  padding: 0 6px;
+}
+
+#workspaces button {
+  padding: 0 6px;
+  color: #545c7e;
+  background: transparent;
+  border-radius: 8px;
+  margin: 4px 2px;
+  transition: all 0.2s ease;
+}
+
+#workspaces button.active {
+  color: #7aa2f7;
+  background: rgba(122, 162, 247, 0.15);
+}
+
+#workspaces button:hover {
+  color: #c0caf5;
+  background: rgba(192, 202, 245, 0.1);
+}
+
+#workspaces button.urgent {
+  color: #f7768e;
+  background: rgba(247, 118, 142, 0.15);
+}
+
+#window {
+  color: #7aa2f7;
+  padding: 0 8px;
+}
+
+#clock {
+  color: #bb9af7;
+  padding: 0 12px;
+  font-weight: bold;
+}
+
+#battery {
+  color: #9ece6a;
+  padding: 0 8px;
+}
+
+#battery.warning {
+  color: #e0af68;
+}
+
+#battery.critical {
+  color: #f7768e;
+}
+
+#network {
+  color: #7dcfff;
+  padding: 0 8px;
+}
+
+#network.disconnected {
+  color: #f7768e;
+}
+
+#pulseaudio {
+  color: #bb9af7;
+  padding: 0 8px;
+}
+
+#pulseaudio.muted {
+  color: #545c7e;
+}
+
+#backlight {
+  color: #e0af68;
+  padding: 0 8px;
+}
+
+#bluetooth {
+  color: #7aa2f7;
+  padding: 0 8px;
+}
+
+#bluetooth.disabled {
+  color: #545c7e;
+}
+
+#bluetooth.connected {
+  color: #7aa2f7;
+}
+
+#custom-weather {
+  color: #7dcfff;
+  padding: 0 8px;
+}
+
+#tray {
+  padding: 0 8px;
+}
+
+#custom-power {
+  color: #f7768e;
+  padding: 0 12px;
+  font-size: 16px;
+}
+
+#custom-media {
+  color: #9ece6a;
+  padding: 0 10px;
+}
+
+#custom-media.paused {
+  color: #545c7e;
+}
+
+#custom-media.stopped {
+  color: transparent;
+}
+
+#custom-profile-dot {
+  font-size: 7px;
+  padding: 0;
+  margin-left: -6px;
+  margin-right: 4px;
+  margin-bottom: -6px;
+  min-width: 0;
+}
+
+#custom-profile-dot.save     { color: #7aa2f7; }
+#custom-profile-dot.balanced { color: #c0caf5; }
+#custom-profile-dot.perf     { color: #f7768e; }
+
+#custom-updates {
+  color: #e0af68;
+  padding: 0 6px;
+  font-size: 12px;
+}
+#custom-updates.uptodate { color: transparent; padding: 0; min-width: 0; }
+
+#custom-mullvad {
+  font-size: 13px;
+  padding: 0 4px;
+}
+#custom-mullvad.connected    { color: #9ece6a; }
+#custom-mullvad.disconnected { color: #f7768e; }

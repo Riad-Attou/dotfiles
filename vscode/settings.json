@@ -2,12 +2,20 @@
   /* =========================
      EDITOR
      ========================= */
+"terminal.integrated.gpuAcceleration": "off",
 
   "editor.fontFamily": "Fira Code",
   "editor.fontLigatures": true,
   "editor.formatOnSave": true,
   "editor.largeFileOptimizations": false,
   "editor.unicodeHighlight.ambiguousCharacters": false,
+  "terminal.integrated.profiles.linux": {
+    "zsh": {
+      "path": "/usr/bin/zsh",
+      "args": ["-l"]
+    }
+  },
+  "terminal.integrated.defaultProfile.linux": "zsh",
 
   /* =========================
      LANGUAGE SPECIFIC
@@ -235,5 +243,18 @@
      ========================= */
 
   "haskell.manageHLS": "GHCup",
-  "claudeCode.preferredLocation": "panel"
+  "claudeCode.preferredLocation": "panel",
+  "diffEditor.ignoreTrimWhitespace": false,
+  "python.createEnvironment.trigger": "off",
+  "terminal.integrated.initialHint": false,
+  "network.meteredConnection": "off",
+  "terminal.integrated.commandsToSkipShell": [
+    "terminal.integrated.profiles.linux"
+  ],
+  "chat.tools.terminal.autoApprove": {
+    "true": true,
+    "pdftotext": true,
+    "pdflatex": true
+  },
+  "update.showReleaseNotes": false
 }
